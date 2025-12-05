@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cozy Crumb - Checkout</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+    <nav class="nav-links">
+    <a href="index.html">Home</a> 
+    <a href="locations.html">Locations</a>
+    <a href="order.html">Order Now</a>
+    <a href="custom-orders.html">Custom Orders</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="about.html">About Us</a>
+    </nav>
+    </header>
+
+    <section id="checkout-page-section">
+        <div class="checkout-container">
+            <h1 class="checkout-title">Complete Your Order</h1>
+
+            <section class="cart-summary">
+                <h2>Order Summary</h2>
+                
+                <div class="cart-details-grid" id="checkout-cart-items">
+                    
+                    <div class="header-row">
+                        <span>Item</span>
+                        <span>Qty</span>
+                        <span style="text-align: right;">Total</span>
+                    </div>
+                    
+                    <p style="grid-column: 1 / -1; margin-top: 10px;">Loading cart...</p>
+                </div>
+                
+                <div class="totals-section">
+                    <p>Subtotal: <span id="subtotal-cost">$0.00</span></p>
+                    <p>Tax (7%): <span id="tax-cost">$0.00</span></p>
+                    <h3>Grand Total: <span id="grand-total-cost">$0.00</span></h3>
+                </div>
+            </section>
+
+            <form id="checkout-form">
+                
+                <fieldset>
+                    <legend>Pickup Details</legend>
+                    <div id="pickup-details-form" class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required>
+
+                        <label for="pickup-location">Pickup Location:</label>
+                        <select id="pickup-location" name="pickup-location" required>
+                            <option value="">-- Select Location --</option>
+                            <option value="ballard">Ballard</option>
+                            <option value="capitol-hill">Capitol Hill</option>
+                            <option value="columbia-city">Columbia City</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Payment Information</legend>
+                    <div id="payment-form" class="form-group">
+                        <label for="card-number">Card Number (16 digits):</label>
+                        <input type="text" id="card-number" name="card-number" required pattern="\d{16}" title="16-digit card number">
+
+                        <label for="expiry">Expiry Date (MM/YY):</label>
+                        <input type="text" id="expiry" name="expiry" required pattern="\d{2}/\d{2}" placeholder="MM/YY">
+
+                        <label for="cvv">CVV (3 or 4 digits):</label>
+                        <input type="text" id="cvv" name="cvv" required pattern="\d{3,4}" title="3 or 4 digits">
+                    </div>
+                </fieldset>
+
+                <div class="checkout-actions">
+                    <button type="submit" id="place-order-btn" disabled>PLACE ORDER</button>
+                    <p id="validation-message" style="color: red; margin-top: 10px;"></p>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

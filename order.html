@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cozy Crumb - Order Now</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght=400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+    <nav class="nav-links">
+    <a href="/s3868755/public_html/the cozy crumb/index.html">Home</a> 
+    <a href="/s3868755/public_html/the cozy crumb/locations.html">Locations</a>
+    <a href="/s3868755/public_html/the cozy crumb/order.html">Order Now</a>
+    <a href="/s3868755/public_html/the cozy crumb/custom-orders.html">Custom Orders</a>
+    <a href="/s3868755/public_html/the cozy crumb/contact.html">Contact Us</a>
+    <a href="/s3868755/public_html/the cozy crumb/about.html">About Us</a>
+</nav>
+    </header>
+
+    <section id="order-page-section">
+        <div class="order-container">
+            <h1 class="order-title">Order Today</h1>
+
+            <h2>Our Delights</h2>
+            <div class="delights-grid">
+                
+                <div class="delight-item">
+                    <img src="images/breads.jpeg" alt="Assortment of artisan breads" class="delight-img">
+                    <div class="item-info">
+                        <h4>HEARTWARMING BREADS</h4>
+                        <h3>Artisan Bread</h3>
+                        <p class="price">Starting at $5.00</p>
+                        <p>Our classic sourdoughs and rye breads, baked fresh every morning.</p>
+                        
+                        <div class="item-controls">
+                            <label for="artisan-type">Select Bread:</label>
+                            <select id="artisan-type" class="product-select">
+                                <option value="none" data-price="0">-- Choose a Bread --</option>
+                                <option value="sourdough-loaf" data-price="10.00">Sourdough Loaf ($10.00)</option>
+                                <option value="classic-rye" data-price="9.50">Classic Rye ($9.50)</option>
+                                <option value="ciabatta" data-price="5.00">Ciabatta ($5.00)</option>
+                            </select>
+                            
+                            <label for="artisan-qty">Quantity:</label>
+                            <input type="number" id="artisan-qty" class="product-qty" value="0" min="0">
+                            
+                            <button class="add-delight-to-cart-btn">ADD SELECTED ITEMS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="delight-item" data-category="pastries">
+                    <img src="images/bread_trays.jpeg" alt="Assorted fruit tarts and pastries" class="delight-img">
+                    <div class="item-info">
+                        <h3>DECADENT PASTRIES</h3>
+                        <p class="price">Starting at $3.50</p>
+                        <p>Flaky croissants, sweet rolls, and seasonal fruit Danishes.</p>
+
+                        <div class="item-controls">
+                            <label for="pastry-select">Select Pastry:</label>
+                            <select id="pastry-select">
+                                <option value="">— Choose a Pastry —</option>
+                                <option value="croissant">Butter Croissant ($3.50)</option>
+                                <option value="almond">Almond Croissant ($4.50)</option>
+                                <option value="cinnamon">Cinnamon Roll ($5.00)</option>
+                            </select>
+                            <label for="pastry-qty">Quantity:</label>
+                            <input type="number" id="pastry-qty" class="product-qty" value="1" min="1">
+                            <button class="add-delight-to-cart-btn">ADD SELECTED ITEMS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="delight-item">
+                    <img src="images/donuts.jpeg" alt="Custom celebration cakes" class="delight-img">
+                    <div class="item-info">
+                        <h4>CUSTOM CELEBRATION CAKES</h4>
+                        <h3>Specialty Cakes</h3>
+                        <p class="price">Starting at $25.00</p>
+                        <p>Cheesecakes, tarts, and personal-sized custom celebration items.</p>
+                        
+                        <div class="item-controls">
+                            <label for="cake-type">Select Item:</label>
+                            <select id="cake-type" class="product-select">
+                                <option value="none" data-price="0">-- Choose an Item --</option>
+                                <option value="small-tart" data-price="25.00">Small Fruit Tart ($25.00)</option>
+                                <option value="cheesecake-slice" data-price="7.00">Cheesecake Slice ($7.00)</option>
+                                <option value="mini-donuts" data-price="3.00">Mini Donuts (ea.) ($3.00)</option>
+                            </select>
+                            
+                            <label for="cake-qty">Quantity:</label>
+                            <input type="number" id="cake-qty" class="product-qty" value="0" min="0">
+                            
+                            <button class="add-delight-to-cart-btn">ADD SELECTED ITEMS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Our Signature Favorites</h2>
+            <div class="favorites-grid-order">
+                
+                <div class="favorite-item-order">
+                    <img src="images/sourdough.jpeg" alt="Sourdough Loaf" class="favorite-img">
+                    <div class="item-info">
+                        <h3>Sourdough Loaf (The Kraken)</h3>
+                        <p class="price">$10.00</p>
+                        <p>The Kraken: Our famous, deeply flavored house sourdough.</p>
+                        
+                        <div class="item-controls">
+                            <label for="sourdough-qty">Quantity:</label>
+                            <input type="number" id="sourdough-qty" class="product-qty" value="0" min="0">
+                            <button class="add-to-cart-btn" data-name="Sourdough Loaf (The Kraken)" data-price="10.00">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="favorite-item-order">
+                    <img src="images/croissant.jpeg" alt="Classic Croissant" class="favorite-img">
+                    <div class="item-info">
+                        <h3>Butter Croissant</h3>
+                        <p class="price">$4.50</p>
+                        <p>Classic French butter croissant, perfectly flaky and golden.</p>
+                        
+                        <div class="item-controls">
+                            <label for="croissant-qty">Quantity:</label>
+                            <input type="number" id="croissant-qty" class="product-qty" value="0" min="0">
+                            <button class="add-to-cart-btn" data-name="Butter Croissant" data-price="4.50">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="favorite-item-order">
+                    <img src="images/cheesecak.jpeg" alt="Slice of Cheesecake" class="favorite-img">
+                    <div class="item-info">
+                        <h3>NY Cheesecake Slice</h3>
+                        <p class="price">$7.00</p>
+                        <p>Rich, creamy New York style cheesecake, chocolate drizzle.</p>
+                        
+                        <div class="item-controls">
+                            <label for="cheesecake-qty">Quantity:</label>
+                            <input type="number" id="cheesecake-qty" class="product-qty" value="0" min="0">
+                            <button class="add-to-cart-btn" data-name="NY Cheesecake Slice" data-price="7.00">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shopping-cart-summary">
+                <h2>Your Cart (Review)</h2>
+                
+                <div id="cart-items-list">
+                    <p>Your cart is empty.</p>
+                </div>
+
+                <div class="cart-total-display">
+                    <h3>Total: <span id="cart-total">$0.00</span></h3>
+                </div>
+            </div>
+
+            <div class="checkout-call-to-action">
+                <p>Finished selecting your items?</p>
+                <a href="checkout.html" class="checkout-button-order">Proceed to Checkout</a>
+            </div>
+
+        </div>
+    </section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
